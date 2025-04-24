@@ -97,3 +97,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - AI capabilities provided by [Google Vertex AI](https://cloud.google.com/vertex-ai)
 - Authentication through Google OAuth2 (inspired by [st-paywall](https://github.com/tylerjrichards/st-paywall))
 - Subscription management via Stripe (inspired by [st-paywall](https://github.com/tylerjrichards/st-paywall))
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+> For inquiries, feel free to contact me via [email](mailto:juliushaas91@gmail.com) or [LinkedIn](https://www.linkedin.com/in/jh91/)
