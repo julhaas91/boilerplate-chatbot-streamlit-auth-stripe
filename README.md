@@ -1,6 +1,8 @@
-# Chatbot Boilerplate
+# Chatbot Boilerplate with Google Auth and Stripe
 
 This repository provides a foundation for building sophisticated chatbot applications using Streamlit, leveraging the power of Google's Vertex AI for natural language processing and integrating secure authentication with Google and Stripe for subscription management.
+
+> ⚠️ **DISCLAIMER**: This boilerplate is for experimental and educational purposes only. It is not intended for production use. Use at your own risk.
 
 ## Features:
 
@@ -22,23 +24,21 @@ Before running the application, you'll need:
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/julhaas91/boilerplate-chatbot.git
-   cd boilerplate-chatbot
-   ```
+```bash
+git clone https://github.com/julhaas91/boilerplate-chatbot.git
+cd boilerplate-chatbot
+```
 
 2. Create a virtual environment and install dependencies:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
+```bash
+./taskfile.sh reset_venv_local
+```
 
 3. Create a `config.env` file in the project root with the following values:
-   ```
-   GCP_PROJECT_ID=your-gcp-project-id
-   GCP_PROJECT_NUMBER=your-gcp-project-number
-   ```
+```
+GCP_PROJECT_ID=your-gcp-project-id
+GCP_PROJECT_NUMBER=your-gcp-project-number
+```
 
 4. Create an `allowed_users.txt` file in the `authentication_paywall` directory with a list of authorized email addresses (one per line).
 
@@ -46,7 +46,7 @@ Before running the application, you'll need:
 
 ### Run locally
 ```bash
-`./taskfile.sh run_application`
+./taskfile.sh run
 ```
 
 Or run the Streamlit app directly:
@@ -67,24 +67,6 @@ The application will be available at `http://localhost:8501`.
 2. **Stripe Subscription Verification**: The system checks if the user has an active subscription
 3. **Philosopher Selection**: Users select which philosopher they want to chat with
 4. **Conversation**: The AI responds in the style and perspective of the selected philosopher
-
-## Project Structure
-
-```
-boilerplate-chatbot/
-├── streamlit_app.py          # Main application file
-├── config.env                # Configuration environment variables
-├── taskfile.sh               # Task automation script
-└── authentication_paywall/   # Authentication and subscription management
-    ├── __init__.py
-    ├── aggregate_auth.py     # Main auth handling
-    ├── google_auth.py        # Google OAuth2 implementation
-    ├── stripe_auth.py        # Stripe subscription verification
-    ├── common.py             # Logging configuration
-    └── allowed_users.txt     # List of authorized users
-├── taskfile.sh               # Task automation script TODO: TBD
-└── common/                   # Shared utilities
-```
 
 ## Configuration Options
 

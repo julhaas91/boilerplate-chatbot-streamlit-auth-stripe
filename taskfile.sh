@@ -11,7 +11,7 @@ print_env_variables() {
   printenv
 }
 
-run_application() {
+run() {
   uv run streamlit run src/streamlit_app.py
 }
 
